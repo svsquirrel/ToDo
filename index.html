@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel='stylesheet' href='style.css'>
+</head>
+<body>
+    <div class = 'container'>
+    <div class = 'navarea col'></div>
+    <div class = 'content col'> </div>      
+    </div>
+
+    <div class = 'enterBookPopup'>
+        <div class = 'formPopup' id = 'popupForm'>
+            <form  class = 'formContainer' >
+                <div class = 'icondiv'>
+                    <i class = 'material-icons staricon'>star_border</i>
+                    <i class = 'material-icons doneicon'>done</i>
+                    <i class = 'material-icons closeicon'>cancel</i>
+                </div>
+                <div class = 'taskentry'>
+                    <label for = 'title'>Task</label>
+                    <input type = 'text' class = 'task' placeholder='Task' name = 'task'>
+                </div>
+                <div>
+                    <label class = 'due'> Due Date </label>
+                    <input class = 'dateicon' type = 'date' id = 'duedate'></input>
+                </div>
+                <div class = 'addToDay'>
+                    <label for = 'checkbox'>Add to My Day</label>
+                    <input type = 'checkbox' class = 'checkAddDay' name = 'addToDay'>
+                </div>
+                <textarea class = 'textarea' placeholder='Add Note'></textarea>
+            </form>
+        </div>
+    </div>
+   <script src='index.js'  type = 'module'></script>
+ </body>
+</html>

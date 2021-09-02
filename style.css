@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import '~js-datepicker/dist/datepicker.min.css';
+:root  {
+    --yellow:   #f1f163;
+    --pink:     #eea4dc;
+    --magenta:  #ee82ee;
+    --green:    #56e7c3;
+    --blue:     #6a53f0;
+    --offwhite: #ece4e4;
+    --greyed:   #dce4e6;
+    --ltgray:   #343335;
+    --medgray:  #3d4244;
+    --dkgray:   #2a292b;
+    --black:    #000000;
+    --dkgreen:  #34db28;
+    --icolor:   white;
+    --ihover:   white;
+
+}
+.container {
+    display:flex;
+    height: 100vh;
+    font-family: 'PT Sans', sans-serif;
+    background-color: var(--black);
+ }
+
+.content{
+    width: 75%;
+    max-width: 750px;
+    position: relative;
+    text-align: left;
+}
+/* ********** NAV SIDEBAR ***********/
+.navarea{
+    background-color: var(--dkgray);
+    color: var(--offwhite);
+    font-size: 16px; 
+    width: 25%;
+    max-width: 280px;  
+}
+.material-icons{
+    font-size: 24px;
+    vertical-align: middle;
+    display: inline;
+}
+.iconcolor{
+    color: var(--icolor);
+}
+.navdiv{
+    padding: 15px 0 20px 20px;
+    cursor: pointer;
+}
+.navdiv:hover{
+    background-color: var(--ltgray);
+    color: var(--ihover);
+}
+.navtext{
+    display: inline;
+    padding-left: 20px;
+}
+#Lists{
+    border-top: 1px var(--greyed) solid;
+    
+}
+
+/********MY DAY PAGE ***********/
+.pageiconbig{
+    font-size: 32px;
+    display: inline;
+    vertical-align: top;
+    padding-right: 20px;
+ }
+.dayimg{
+    max-width: 800px;
+    height: auto;
+}
+.dayinfo{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 28px;
+    font-weight: 500;
+    color:  var(--medgray);
+}
+.daydate{
+    font-size: 18px;
+    font-weight: 400;
+}
+/********GENERAL PAGE STYLE******/
+.textbig {
+    font-size: 32px;
+    color: var(--icolor);
+    display: inline;
+}
+.pagediv{
+    position: absolute;
+    top: 30px;
+    left: 70px;
+}
+.pageiconbig{
+    font-size: 32px;
+    color: var(--icolor);
+    display: inline;
+    vertical-align: top;
+    padding-right: 20px;
+}
+.addbox{
+    position:absolute;
+    top: 30px;
+    left: 400px;
+    border-radius: 20px;
+    height: 60px;
+    width:  250px;
+    color: white;
+    text-align: center;
+    background:rgba(170, 164, 164, 0.3);
+    cursor:pointer;
+} 
+.display{
+    background-color: var(--green);
+    height: auto;
+    position: absolute;
+    top: 140px;
+    left: 20px;
+    width: 90%;
+} 
+.unit{
+    background-color: var(--magenta);
+    width: 80%;
+    height: 100px;
+}
+/*******POP UP FORM *******/
+.enterBookPopup {
+    position: relative;
+    text-align: left;
+    width: 100%;
+  }
+  .formPopup {
+    display: none;
+    position: fixed;
+    left: 60%;
+    top: 25%;
+    transform: translate(-50%, 5%);
+    border-radius: 20px;
+    z-index: 9;
+  }
+  .formContainer {
+    width:430px;
+    height: 430px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(61, 66, 68, 0.7);
+    color: var(--offwhite);
+    
+  }
+  .formContainer input[type=text]{
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 20px 0;
+    border: none;
+    border-radius: 5px;
+    background: var(--greyed);
+
+  }
+  .formContainer input[type=text]:focus {
+    background-color: rgb(245, 237, 237);
+    outline: none;
+  }
+ .icondiv{
+     padding-bottom: 20px;
+ }
+ .staricon{
+     display: inline;
+     padding: 0 300px 0 10px;
+ }
+.doneicon{
+    display: inline;
+    cursor: pointer;
+    padding-right: 20px;
+    color: var(--dkgreen);
+}
+.closeicon{
+    display: inline;
+    cursor: pointer;
+    
+}
+.closeicon:hover, .doneicon:hover {
+    opacity: 0.7;
+}
+.taskentry{
+      display:block;
+      padding-bottom: 20px;
+  }
+.task{
+      display: inline;
+}
+.due{
+    display: inline;
+    padding-right: 20px;
+    
+}
+.dateicon{
+    display: inline;
+    background-color: var(--greyed);
+    font-size: 16px;
+    font-family: 'PTsans', sans-serif;
+}
+.addToDay{
+   position: relative;
+   vertical-align: middle;
+   padding: 20px 0 30px 0;
+   
+}
+.textarea{
+    background: var(--greyed);
+    font-size: 16px;
+    font-family:'PTsans', sans-serif;
+    width: 90%;
+    height: 100px;
+    border-radius: 5px;
+}
+  
+  
