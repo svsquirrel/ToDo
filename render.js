@@ -76,7 +76,7 @@ function renderPages(design){
                 content.appendChild(displaydiv);
             } else if (navdata[i].name == design){
                 pageicondiv.innerHTML = navdata[i].icon;
-                pageicondiv.classList.add('pageiconbig','material-icons');
+                pageicondiv.classList.add('pageiconbig','material-icons', 'md-32');
                 pageicondiv.style.setProperty('--icolor', navdata[i].color);
                 pagetextdiv.style.setProperty('--icolor', navdata[i].color);
                 pagetextdiv.classList.add('textbig');

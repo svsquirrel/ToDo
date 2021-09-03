@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 @import '~js-datepicker/dist/datepicker.min.css';
 :root  {
     --yellow:   #f1f163;
@@ -6,6 +6,7 @@
     --magenta:  #ee82ee;
     --green:    #56e7c3;
     --blue:     #6a53f0;
+    --medblue:  #2196F3;
     --offwhite: #ece4e4;
     --greyed:   #dce4e6;
     --ltgray:   #343335;
@@ -13,14 +14,24 @@
     --dkgray:   #2a292b;
     --black:    #000000;
     --dkgreen:  #34db28;
+    --dkred:    #cf4242;
+   
     --icolor:   white;
     --ihover:   white;
 
 }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+
+.material-icons{
+    vertical-align: middle;
+    display: inline;
+}
+
 .container {
     display:flex;
     height: 100vh;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     background-color: var(--black);
  }
 
@@ -38,11 +49,7 @@
     width: 25%;
     max-width: 280px;  
 }
-.material-icons{
-    font-size: 24px;
-    vertical-align: middle;
-    display: inline;
-}
+
 .iconcolor{
     color: var(--icolor);
 }
@@ -60,12 +67,10 @@
 }
 #Lists{
     border-top: 1px var(--greyed) solid;
-    
 }
 
 /********MY DAY PAGE ***********/
 .pageiconbig{
-    font-size: 32px;
     display: inline;
     vertical-align: top;
     padding-right: 20px;
@@ -133,6 +138,7 @@
 .enterBookPopup {
     position: relative;
     text-align: left;
+    font-family: 'Noto Sans', sans-serif;
     width: 100%;
   }
   .formPopup {
@@ -169,23 +175,39 @@
  .icondiv{
      padding-bottom: 20px;
  }
- .staricon{
+ input[type=checkbox] {
+    display: none;
+}
+ input[type=checkbox] + section .material-icons::before {
+     content: 'star_border';
+}
+ input[type=checkbox]:checked + section .material-icons::before {
+    content: 'star';
+    color: var(--pink);
+}
+.staricon{
      display: inline;
-     padding: 0 300px 0 10px;
+     padding: 0 250px 0 0;
+     cursor: pointer;
  }
+ .staricon :hover{
+     color: var(--pink);
+ }
+ 
 .doneicon{
     display: inline;
     cursor: pointer;
     padding-right: 20px;
-    color: var(--dkgreen);
 }
 .closeicon{
     display: inline;
     cursor: pointer;
-    
 }
-.closeicon:hover, .doneicon:hover {
-    opacity: 0.7;
+.closeicon:hover{
+    color: var(--dkred);
+}
+.doneicon:hover{
+    color: var(--dkgreen);
 }
 .taskentry{
       display:block;
@@ -202,8 +224,8 @@
 .dateicon{
     display: inline;
     background-color: var(--greyed);
-    font-size: 16px;
-    font-family: 'PTsans', sans-serif;
+    font-size: 18px;
+    
 }
 .addToDay{
    position: relative;
@@ -211,6 +233,66 @@
    padding: 20px 0 30px 0;
    
 }
+.checkcontainer{
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    width: 150px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.checkcontainer input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: var(--offwhite);
+}
+.checkcontainer:hover input ~ .checkmark {
+    background-color: var(--greyed);
+  }
+.checkcontainer input:checked ~ .checkmark {
+    background-color: var(--medblue);
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .checkcontainer input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .checkcontainer .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
 .textarea{
     background: var(--greyed);
     font-size: 16px;

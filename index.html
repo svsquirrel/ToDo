@@ -18,9 +18,15 @@
         <div class = 'formPopup' id = 'popupForm'>
             <form  class = 'formContainer' >
                 <div class = 'icondiv'>
-                    <i class = 'material-icons staricon'>star_border</i>
-                    <i class = 'material-icons doneicon'>done</i>
-                    <i class = 'material-icons closeicon'>cancel</i>
+                     <label >
+                     <input type = 'checkbox' class = 'starcheck'>
+                     <section class = 'staricon'>
+                         <i id = 'starbtn' class = 'material-icons md-36 starcheck'></i>
+                     </section>
+                     </label> 
+                    
+                    <i class = 'material-icons md-36 doneicon'>done</i>
+                    <i class = 'material-icons md-36 closeicon'>cancel</i>
                 </div>
                 <div class = 'taskentry'>
                     <label for = 'title'>Task</label>
@@ -31,8 +37,10 @@
                     <input class = 'dateicon' type = 'date' id = 'duedate'></input>
                 </div>
                 <div class = 'addToDay'>
-                    <label for = 'checkbox'>Add to My Day</label>
-                    <input type = 'checkbox' class = 'checkAddDay' name = 'addToDay'>
+                    <label class = 'checkcontainer'>Add to My Day
+                    <input type = 'checkbox' class = 'checkAddDay'>
+                    <span class = 'checkmark'></span>
+                    </label>
                 </div>
                 <textarea class = 'textarea' placeholder='Add Note'></textarea>
             </form>

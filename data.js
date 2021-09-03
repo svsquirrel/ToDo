@@ -5,7 +5,8 @@ let myToDo = [];
 const form = document.querySelector('#popupForm');
 const cancelform = document.querySelector('.closeicon');
       cancelform.addEventListener('click', () => form.style.display='none');
-      
+
+     
 const submit = document.querySelector('.doneicon');
       submit.addEventListener('click',  addTaskData);
 
@@ -29,7 +30,8 @@ function addTaskData(){
     
     const newdate = today;
     const newtask = document.querySelector('.task').value;
-    const newstar = 'false';
+    const newstar = document.querySelector('.starcheck').checked;
+    
     const newmyday = document.querySelector('.checkAddDay').checked;
     const newdue =  document.querySelector('#duedate').value;
     const newnote = document.querySelector('.textarea').value;
